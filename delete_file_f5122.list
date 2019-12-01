@@ -1,0 +1,5 @@
+/etc/dconf/db/vendor.d/jolla-camera-hw-kugo.txt
+/etc/dconf/db/vendor.d/lipstick-configs-kugo.txt
+/etc/dconf/db/vendor.d/silica-configs-kugo.txt
+/etc/ofono/ril_subscription.d/no-modem.conf
+/usr/share/csd/settings.d/30-hw-settings-blanc-g1109.ini

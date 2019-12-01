@@ -1,0 +1,32 @@
+Description: Pattern with packages for g1109 configurations
+Name: jolla-configuration-g1109
+Requires:
+- pattern:jolla-hw-adaptation-blanc
+
+- droid-config-g1109-sailfish
+- droid-config-g1109-pulseaudio-settings
+- droid-config-g1109-policy-settings
+- droid-config-g1109-preinit-plugin
+- droid-config-g1109-flashing
+- droid-config-g1109-bluez5
+- droid-hal-version-g1109
+
+- patterns-sailfish-applications
+- patterns-sailfish-ui
+
+- sailfish-content-graphics-z@ICON_RES@
+
+- jolla-settings-system-nfc
+
+- geoclue-provider-mlsdb
+- csd
+- mapplauncherd-booster-silica-qt5-media
+
+- patterns-sailfish-consumer-generic
+- pattern:sailfish-porter-tools
+
+# 3rd party accounts like Twitter, VK, cloud services, etc
+- jolla-settings-accounts-extensions-3rd-party-all
+
+Summary: Jolla Configuration g1109
+

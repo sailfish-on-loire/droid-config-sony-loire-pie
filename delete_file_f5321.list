@@ -1,0 +1,7 @@
+/etc/dconf/db/vendor.d/jolla-camera-hw-suzu.txt
+/etc/dconf/db/vendor.d/lipstick-configs-suzu.txt
+/etc/dconf/db/vendor.d/silica-configs-suzu.txt
+/etc/ofono/ril_subscription.d/dual-sim.conf
+/etc/ofono/ril_subscription.d/no-modem.conf
+/usr/share/csd/settings.d/20-hw-settings-dual-sim.ini
+/usr/share/csd/settings.d/30-hw-settings-blanc-g1109.ini
