@@ -1,6 +1,6 @@
 @echo off
 
-:: This is simple windows flashing script for Sony Xperia 10 device
+:: This is simple windows flashing script for Sony Xperia Loire device
 :: This script is using fastboot to flash which differs from the factory method.
 
 set tmpflashfile=tmpfile.txt
@@ -11,7 +11,7 @@ set fastbootkillretval=0
 set serialnumbers=
 
 echo(
-echo This is a Windows flashing script for Sony Xperia 10 device.
+echo This is a Windows flashing script for Sony Xperia Loire device.
 echo(
 echo Power on the device in fastboot mode, by doing the following:
 echo 1. Turn off your Xperia.
@@ -113,7 +113,7 @@ del %tmpflashfile% >NUL 2>NUL
 setlocal EnableDelayedExpansion
 
 :: Find the blob image. Make sure there's only one.
-for /r %%f in (*_v9_ganges.img) do (
+for /r %%f in (*_v9_loire.img) do (
 if not defined blobfilename (
 REM Take only the filename and strip out the path which otherwise is there.
 REM This is to make sure that we do not face issues later with e.g. spaces in the path etc.
@@ -136,7 +136,7 @@ echo Please download it from
 echo %oemblobwebsite%
 echo(
 echo Ensure you download the supported version of the image found under:
-echo "Software binaries for AOSP Pie (Android 9.0) - Kernel 4.9 - Ganges"
+echo "Software binaries for AOSP Pie (Android 9.0) - Kernel 4.9 - Loire"
 echo and unzip it into this directory.
 echo Note: information on which versions are supported is written in our Sailfish X
 echo installation instructions online.
@@ -155,13 +155,10 @@ echo Found '%blobfilename%' that will be used as vendor image. Continuing..
 :: happens when flashing is done.
 @echo on
 
-@call :fastboot flash boot_a hybris-boot.img
-@call :fastboot flash boot_b hybris-boot.img
-@call :fastboot flash system_b fimage.img001
+@call :fastboot flash boot hybris-boot.img
+@call :fastboot flash system fimage.img001
 @call :fastboot flash userdata sailfish.img001
-@call :fastboot flash vendor_a vendor.img001
-@call :fastboot flash vendor_b vendor.img001
-@call :fastboot flash oem_a %blobfilename%
+@call :fastboot flash oem %blobfilename%
 
 :: NOTE: Do not reboot here as the battery might not be in the device
 :: and in such situation we should not reboot the device.
